@@ -1,0 +1,213 @@
+.index-wrapper{
+    .index-hero{
+        background-color: #280632;
+        margin-top: -75px;
+        
+
+        .fullscreen-bg__video {
+            width: 100%;
+            z-index: -100;
+        }
+
+        .section{
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:1;
+            min-width: 100%;
+
+            .row{
+                padding-top: 15%;
+                padding-bottom: 15%;
+                vertical-align: middle;
+                text-align: center;
+                //height: 100vh;
+
+                p{
+                    color: #C1ACC5;
+                    font-weight: lighter;
+                }
+                h1{
+                    font-size: 3.5rem;
+                }
+
+                .btn{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .index-content{
+
+        .primary{
+            padding-top: 70px;
+            .primary-skills{
+                padding-bottom: 80px;
+
+                .title-row{
+                    padding-bottom: 50px;
+                    .col-12{
+                        text-align: center;
+                    }
+                }
+                .content-row{
+                    text-align: center;
+                    .card-col{
+
+                        text-align: center;
+    
+                        .document-card{
+                            margin-left: 0;
+                            margin-right: 0;
+                            min-height: 100%;
+                            //width: 90%;
+                            box-shadow: 0px 3px 11px -4px rgba(0,0,0,0.17);
+    
+                            p{
+                                font-size: 1rem;
+                            }
+                        }
+            
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        
+        .secondary{
+
+            background-color: #f5f5f5;
+            .secondary-skills{
+                padding-top: 70px;
+                padding-bottom: 50px;
+                
+    
+                .title-row{
+                    padding-bottom: 50px;
+    
+                    .col-12{
+                        text-align: center;
+                    }
+                }
+    
+                .skills-row{
+    
+                    display: flex;
+                    flex-wrap: wrap;
+    
+                    .col-md-3{
+                        padding-left: 2.5%;
+                        padding-right: 2.5%;
+                        margin-bottom: 60px;
+                        padding-bottom: 20px;
+                        border-left: 6px solid #D8D8D8;
+                        //min-height: 218px;
+                        //height: inherit;
+                        min-height: 100%;
+    
+                        p{
+                            font-size: 1rem;
+                        }
+    
+                    }
+                }
+    
+    
+            }
+    
+        }
+        
+    }
+
+    .index-cta{
+        background-image: asset_url("home_bg1.png");
+        background-attachment: fixed;
+        background-size: cover;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        .section{
+            .row{
+                .col-12{
+                    text-align: center;
+                    h1{
+                        color: white;
+                    }
+                    p{
+                        color: white;
+                    }
+
+                    .socialimg{
+                        
+                        padding-left: 7%;
+                        padding-right: 7%;
+                        margin-top: 30px;
+                        height: 8%;
+        
+                        &:hover{
+                            transform: translate(0,-5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (orientation: "portrait"){
+
+        h4{
+            font-size: 1rem;
+        }
+
+        .index-hero{
+
+            background-image: asset_url("pauseScreen22.png");
+
+            .fullscreen-bg__video{
+                display: none;
+            }
+
+            .section{
+                position: relative;
+                padding-top: 20%;
+                padding-bottom: 20%;
+
+                .row{
+                    h1{
+                        font-size: 2.5rem;
+                    }
+
+                }
+            }
+        }
+
+
+
+    }
+
+    @media only screen and (max-width: 820px){
+        .index-content{
+            .secondary{
+                .secondary-skills{
+                    .skills-row{
+                        .col-md-3{
+                            padding-left: 5%;
+                            padding-right: 5%;
+
+                            .featurespan{
+                                padding-left: 7%;
+                                padding-right: 7%;
+
+                                p{
+                                    font-size: 0.85rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

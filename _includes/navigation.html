@@ -1,0 +1,35 @@
+
+
+<nav class="navbar navbar-expand-md sticky-top navbar-dark">
+    
+    <div class= "container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav collapsible-menu align-items-md-center">
+                <li class="nav-item {% if page.navpage == 'home' %}active{% endif %}">
+                    <a class="nav-link" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item {% if page.navpage == 'ux' %}active{% endif %}">
+                    <a class="nav-link" href="/ux.html">UX</a>
+                </li>
+                <li class="nav-item {% if page.navpage == 'graphic' %}active{% endif %}">
+                    <a class="nav-link" href="/graphic.html">Graphic Design</a>
+                </li>
+                <li class="nav-item {% if page.navpage == 'drawing' %}active{% endif %}">
+                    <a class="nav-link" href="/drawing.html">Illustrations</a>
+                </li>
+            </ul>
+
+            <div class= "resumebtn ml-auto">
+                <a href= "pdf/Supul_resume.pdf" target= "parent">
+                    <button class="btn btn-primary btn-fill btn-nav">Resume</button>
+                </a> 
+    
+            </div>
+        </div>
+    </div>
+        
+</nav>
+    

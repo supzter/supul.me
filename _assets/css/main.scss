@@ -1,0 +1,55 @@
+$font-family-sans-serif: 'muli', sans-serif;
+$font-family-cursive:       'Kaushan Script', cursive;
+
+//colors
+$word-color: #484D54;
+$light-grey: #F5F5F5;
+$accent-purple: #A757B3;
+$dark-purple: #8E419A;
+$light-purple: #C670D3;
+
+
+
+/**
+* Mixins
+*/
+
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin splash-background($fileName, $bgColor) {
+    background-image: asset_url($fileName);
+    background-color: $bgColor;
+    height: 100%;
+    background-position: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.body{
+    height: 100%;
+    width: 100%;
+}
+
+@import "bootstrap";
+@import "subpage";
+@import "common";
+@import "animations";
+@import "footer";
+@import "ux";
+@import "nav";
+@import "graphic";
+@import "drawing";
+@import "other";
+@import "index";

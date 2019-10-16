@@ -1,0 +1,97 @@
+.subpage-wrapper{
+    .subpage-hero{
+
+        padding-top: 200px;
+        padding-bottom: 150px;
+        margin-top: -75px;
+        background-attachment: fixed;
+        background-size: cover;
+
+        .subpage-section{
+            .row{
+                .col-12{
+                    text-align: center;
+                    p{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio{
+        padding-top: 65px;
+        .portfolio-content-wrapper{
+            .project-wrapper{
+                padding-top: 30px;
+                padding-bottom: 30px;
+                .section{
+                    .row{
+                        .col-12{
+                            .portfolioimg-mobile{
+                                display: none;
+                            }
+                        }
+
+                        .pc-image-col{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cta{
+
+        background-attachment: fixed;
+        background-size: cover;
+        
+        .section{
+            .row{
+                text-align: center;
+                
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px){
+        .portfolio{
+
+            padding-top: 20px;
+            padding-bottom: 20px;
+            .portfolio-content-wrapper{
+                .project-wrapper{
+                    .section{
+                        .row{
+                            
+                            .mobile-image-col{
+                                text-align: center;
+                                padding-top: 20px;
+
+                                .portfolioimg-mobile{
+                                    display: block;
+                                    max-width: 100%;
+                                }
+                            }
+
+                            .pc-image-col{
+                                .portfolioimg{
+                                    display: none;
+                                }
+                            }
+
+                            .content-col{
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+   
+
+}
+

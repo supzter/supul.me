@@ -1,0 +1,81 @@
+---
+#This is a work in progress.
+
+layout: default
+
+portfolio:
+
+- name: Equal Ground
+  imageLeft: false
+  image: eqg.png
+  description:  |
+    “Equality” by Equal Ground is Sri Lanka’s first LGBTQ+ magazine. I volunteer with them creating various humorous comics which are both informative and uplifting. 
+
+
+---
+
+<div class= "other-wrapper subpage-wrapper" id= "1">
+    {% include navigation.html %}
+    <div class= "hero subpage-hero">
+        <div class="height-mark"></div>
+        <div class= "container section subpage-section">
+            <div class= "row align-items-center justify-content-center">
+                <div class= "col-12 col-md-5">
+                    <h1>Other work</h1>
+                    <br>
+                    <p>These are some of my hobbies and causes that I currently spend my spare time on…</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class= "portfolio">
+        <div class="portfolio-content-wrapper">
+
+            {% for project in page.portfolio %}
+        
+            <div class="project-wrapper">
+                <div class="container section project-section">
+
+                    <div class="row row-eq-height justify-content-center align-items-center">
+        
+                        {% capture image_col %}
+                        <div class="col-md-7 col-12 pc-image-col">
+                            {{ project.image | append:' class="portfolioimg" '| asset}}
+                        </div>
+                        {% endcapture %} {% if project.imageLeft %} {{ image_col }} {% endif %}
+        
+                        <div class="col-md-5 col-12 content-col">
+                            <h3>{{ project.name}}</h3>
+                            <br>
+                            <p>{{ project.description }}</p>
+        
+                            {% if project.link.size > 0 %}
+                            <a href= {{project.link}} target="_blank">
+                            <button class="btn btn-primary btn-big btn-fill">See more</button>
+                            </a>
+                            <br>
+                            {% endif %}
+                        </div>
+        
+                        {% if project.imageLeft == false %} {{ image_col }} {% endif %}
+                        
+                        <div class="col-12 mobile-image-col">
+                            {{ project.image | append:' class="portfolioimg-mobile" '| asset}}
+                        </div>
+
+                        <div class= "col-12">
+                                <hr>
+                        </div>
+                        
+        
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+            
+        </div>
+    </div>
+
+</div>

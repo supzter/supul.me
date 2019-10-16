@@ -1,0 +1,110 @@
+---
+
+layout: default
+navpage: graphic
+
+portfolio:
+
+- name: Wittaya Aqua
+  imageLeft: false
+  link: https://www.behance.net/gallery/86639661/Wittaya-Aqua-Landing-Page
+  description: |
+    I designed Print and Web Assets for Wittaya Aqua for various promotional purposes. These include social media assets, various promotional banners, business cards, borchures, flyers, and custom illustrations.
+  image: wittaya_graphic1.png
+
+- name: Mosaic
+  imageLeft: true
+  image: mosaic_graphic.png
+  link: https://www.behance.net/gallery/70664173/Mosaic-Branding-and-Visual-Design-Guide
+  description:  |
+    Mosaic Manufacturing creates hardware and software which allow users to 3D print in up to 4 colors at once. <br><br> I created various web and print assets such as reteractable banners, social media assets, flyers and business cards. <br><br> I was also in-charge of the creation of the user manuals for their new hardware line-up. My responsibilities included creating technical illustrations and writing the copy.
+
+
+- name: GoParkr
+  imageLeft: false
+  image: goparkr_graphic.png
+  link: https://www.behance.net/gallery/64014303/GoParkr-Brand-Identity
+  description:  |
+    I designed the business cards, QR cards, posters, the app showcase, and social media assets for GoParkr. <br><br>I also created the branding documents to enforce the typeface, color palette, and iconpgraphy of the product for a consistent brand identity.
+
+
+---
+
+<div class= "graphic-wrapper subpage-wrapper" id= "1">
+    {% include navigation.html %}
+    <div class= "hero subpage-hero">
+        <div class="height-mark"></div>
+        <div class= "container section subpage-section">
+            <div class= "row align-items-center justify-content-center">
+                <div class= "col-12 col-md-5">
+                    <h1>Graphic Design & Branding</h1>
+                    <br>
+                    <p>I create beautiful graphics for both digital and print media. Here’s a list of some of my best work!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class= "portfolio">
+        <div class="portfolio-content-wrapper">
+
+            {% for project in page.portfolio %}
+        
+            <div class="project-wrapper">
+                <div class="container section project-section">
+
+                    <div class="row row-eq-height justify-content-center align-items-center" data-aos="fade-up">
+        
+                        {% capture image_col %}
+                        <div class="col-md-7 col-12 pc-image-col">
+                            {{ project.image | append:' class="portfolioimg" '| asset}}
+                        </div>
+                        {% endcapture %} {% if project.imageLeft %} {{ image_col }} {% endif %}
+        
+                        <div class="col-md-5 col-12 content-col">
+                            <h3>{{ project.name}}</h3>
+                            <br>
+                            <p>{{ project.description }}</p>
+        
+                            {% if project.link.size > 0 %}
+                            <a href= {{project.link}} target="_blank">
+                            <button class="btn btn-primary btn-big btn-fill">See more</button>
+                            </a>
+                            <br>
+                            {% endif %}
+                        </div>
+        
+                        {% if project.imageLeft == false %} {{ image_col }} {% endif %}
+                        
+                        <div class="col-12 mobile-image-col">
+                            {{ project.image | append:' class="portfolioimg-mobile" '| asset}}
+                        </div>
+
+                        <div class= "col-12">
+                                <hr>
+                        </div>
+                        
+        
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+            
+        </div>
+    </div>
+
+    <div class= "cta">
+        <div class= "container section subpage-section">
+            <div class= "row align-items-center justify-content-center">
+                <div class= "col-md-7">
+                    <h1>Wait, there's more!</h1>
+                    <br>
+                    <p>Want to see more of my Graphic Design projects?</p>
+                    <br>
+                    <a href= "https://www.behance.net/supulamaraae85" target= "parent"><button class="btn btn-primary btn-big btn-fill btn-cta">Visit my Behance</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="94px" viewBox="0 0 106 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>artstation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="wireframes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Apple-TV-Copy-2" transform="translate(-696.000000, -4460.000000)" fill="#A757B3" fill-rule="nonzero">
+            <g id="artstation" transform="translate(696.000000, 4460.000000)">
+                <path d="M0,71.8 L8.9,87.2 C10.7,90.7 14.3,93.1 18.4,93.1 L77.7,93.1 L65.5,71.8 L0,71.8 Z" id="Shape"></path>
+                <path d="M105.8,71.9 C105.8,69.8 105.2,67.8 104.1,66.1 L69.3,5.7 C67.5,2.3 64,7.10542736e-15 59.9,7.10542736e-15 L41.5,7.10542736e-15 L95.2,93 L103.7,78.3 C105.3,75.5 105.8,74.3 105.8,71.9 Z" id="Shape"></path>
+                <polygon id="Shape" points="56.7 56.6 32.7 15.1 8.7 56.6"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

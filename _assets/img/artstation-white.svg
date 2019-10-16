@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="51px" viewBox="0 0 58 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>artstation</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="wireframes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Apple-TV" transform="translate(-1168.000000, -2941.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(694.000000, 2938.000000)">
+                <g id="artstation" transform="translate(474.000000, 3.000000)">
+                    <path d="M0,38.9553191 L4.8287234,47.3106383 C5.80531915,49.2095745 7.75851064,50.5117021 9.98297872,50.5117021 L42.156383,50.5117021 L35.537234,38.9553191 L0,38.9553191 Z" id="Shape"></path>
+                    <path d="M57.4021277,39.0095745 C57.4021277,37.8702128 57.0765957,36.7851064 56.4797872,35.862766 L37.5989362,3.09255319 C36.6223404,1.24787234 34.7234043,7.10542736e-15 32.4989362,7.10542736e-15 L22.5159574,7.10542736e-15 L51.6510638,50.4574468 L56.262766,42.4819149 C57.1308511,40.962766 57.4021277,40.3117021 57.4021277,39.0095745 Z" id="Shape"></path>
+                    <polygon id="Shape" points="30.762766 30.7085106 17.7414894 8.19255319 4.72021277 30.7085106"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

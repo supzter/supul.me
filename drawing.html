@@ -1,0 +1,136 @@
+---
+
+layout: default
+navpage: drawing
+
+portfolio:
+
+- name: Sakkai Muniyai
+  imageLeft: false
+  image: smCover1.png
+  link: https://www.facebook.com/pg/papadamnarts/photos/?tab=album&album_id=1345370908899912
+  description:  |
+   “Sakkai Muniyai” is a comic series completely illustrated and written by me. It has managed to attract a lot of dedicated fans and is one of the most popular long-running comic series in recent Sri Lanka.
+
+- name: Thun Riya Saka
+  imageLeft: true
+  image: thunriya1.png
+  description:  | 
+    Thun Riya Saka is a mobile racing game developed by <a href= "http://www.ramstudioteam.com/?i=1" target="parent">RAM Studios</a>. I illustrated their promotional material, concept artwork, and helped with UI optimizations. (This project is still in development so I cannot share any additional content online, but feel free to <a href= "mailto:supul.amarakoon@gmail.com?subject=ThunRiyaSaka&body=" target= "parent">ask me anything!</a>)
+    
+- name: #CreateAScene
+  imageLeft: false
+  image: createascene.png
+  link: https://www.behance.net/gallery/86640061/CreateAScene-campaign-Illustrations
+  description: |
+    <a href= "https://www.facebook.com/createascenelk/" target="parent">#CreateAScene</a> is a campaign launched by Oxfam Sri Lanka to raise awareness about the harassment faced by women and children when using public transit systems. 
+    <br><br>I was responsible for creating the illustrations for the entire campaign.
+
+- name: Wittaya Aqua infographics
+  imageLeft: true
+  image: wittaya_drawing.png
+  link: https://www.behance.net/gallery/83178429/Wittaya-Aqua-Business-Illustrations
+  description:  |
+    These infographics were drawn to represent where Wittaya Aqua stands in the Aquaculture supply chain
+
+- name: Mosaic Technical Illustrations
+  imageLeft: false
+  image: mosaic_drawing.png
+  link: https://www.behance.net/gallery/70533773/Mosaic-Manufacturing-Getting-Started-Guides
+  description:  |
+    Mosaic Manufacturing creates hardware and software which allow users to 3D print in up to 4 colors at once. <br><br> I created custom illustrations to be used in their user manuals.
+
+- name: Papadamn
+  imageLeft: true
+  link: https://papadamn.com/
+  description: |
+    I create various short comics and illustrations under the pen name “Papadamn”. I use this platform to express myself through social commentary.  I create content to raise awareness on various social causes that I believe in such as mental health, LGBTIQ+ issues, suicide prevention, and breast cancer.
+  image: papadamnstuff.png
+  
+
+- name: Mermaid Island Casino
+  imageLeft: false
+  image: mermaid_drawing1.png
+  link: https://www.behance.net/gallery/70278971/Mermaid-Island-Casino
+  description:  |
+    Mermaid Island is an online web-based Casino game. I was responsible for creating various game assets including backgrounds, symbols, and buttons. I was also responsible for coming up with the theme for the experience.
+---
+
+<div class= "drawing-wrapper subpage-wrapper" id= "1">
+    {% include navigation.html %}
+    <div class= "hero subpage-hero">
+        <div class="height-mark"></div>
+        <div class= "container section subpage-section">
+            <div class= "row align-items-center justify-content-center">
+                <div class= "col-12 col-md-5">
+                    <h1>Illustrations</h1>
+                    <br>
+                    <p>Illustration is more than a job for me. It’s my favorite past-time activity. Here are some of the cool projects I’ve been a part of.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class= "portfolio">
+        <div class="portfolio-content-wrapper">
+
+            {% for project in page.portfolio %}
+        
+            <div class="project-wrapper">
+                <div class="container section project-section">
+
+                    <div class="row row-eq-height justify-content-center align-items-center" data-aos="fade-up">
+        
+                        {% capture image_col %}
+                        <div class="col-md-7 col-12 pc-image-col">
+                            {{ project.image | append:' class="portfolioimg" '| asset}}
+                        </div>
+                        {% endcapture %} {% if project.imageLeft %} {{ image_col }} {% endif %}
+        
+                        <div class="col-md-5 col-12 content-col">
+                            <h3>{{ project.name}}</h3>
+                            <br>
+                            <p>{{ project.description }}</p>
+        
+                            {% if project.link.size > 0 %}
+                            <a href= {{project.link}} target="_blank">
+                            <button class="btn btn-primary btn-big btn-fill">See more</button>
+                            </a>
+                            <br>
+                            {% endif %}
+                        </div>
+        
+                        {% if project.imageLeft == false %} {{ image_col }} {% endif %}
+                        
+                        <div class="col-12 mobile-image-col">
+                            {{ project.image | append:' class="portfolioimg-mobile" '| asset}}
+                        </div>
+
+                        <div class= "col-12">
+                                <hr>
+                        </div>
+                        
+        
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+            
+        </div>
+    </div>
+
+    <div class= "cta">
+        <div class= "container section subpage-section">
+            <div class= "row align-items-center justify-content-center">
+                <div class= "col-md-7">
+                    <h1>Wait, there's more!</h1>
+                    <br>
+                    <p>Want to see more of my Illustrations?</p>
+                    <br>
+                    <a href= "https://www.artstation.com/supzter" target= "parent"><button class="btn btn-primary btn-big btn-fill btn-cta">Visit my Artstation</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
