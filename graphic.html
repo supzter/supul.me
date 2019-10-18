@@ -6,21 +6,27 @@ navpage: graphic
 portfolio:
 
 - name: Wittaya Aqua
+  anchor: wittaya-aqua
   imageLeft: false
   link: https://www.behance.net/gallery/86639661/Wittaya-Aqua-Landing-Page
   description: |
-    I designed Print and Web Assets for Wittaya Aqua for various promotional purposes. These include social media assets, various promotional banners, business cards, borchures, flyers, and custom illustrations.
+    I designed the print and web assets for Wittaya Aqua for various promotional events. <br><br>
+    Including but not limited to social media assets, promotional banners, business cards, borchures, flyers, and custom illustrations.
   image: wittaya_graphic1.png
 
-- name: Mosaic
+- name: Mosaic Manufacturing
+  anchor: mosaic
   imageLeft: true
   image: mosaic_graphic.png
   link: https://www.behance.net/gallery/70664173/Mosaic-Branding-and-Visual-Design-Guide
   description:  |
-    Mosaic Manufacturing creates hardware and software which allow users to 3D print in up to 4 colors at once. <br><br> I created various web and print assets such as reteractable banners, social media assets, flyers and business cards. <br><br> I was also in-charge of the creation of the user manuals for their new hardware line-up. My responsibilities included creating technical illustrations and writing the copy.
+    Mosaic Manufacturing creates hardware and software for 3D printing in up to 4 colors at once. <br><br> 
+    I created various web and print assets such as reteractable banners, social media assets, flyers and business cards. <br><br>
+    I also designed and created the product manuals for their new hardware line-up. My responsibilities included creating technical illustrations and writing the copy.
 
 
 - name: GoParkr
+  anchor: goparkr
   imageLeft: false
   image: goparkr_graphic.png
   link: https://www.behance.net/gallery/64014303/GoParkr-Brand-Identity
@@ -39,7 +45,7 @@ portfolio:
                 <div class= "col-12 col-md-5">
                     <h1>Graphic Design & Branding</h1>
                     <br>
-                    <p>I create beautiful graphics for both digital and print media. Here’s a list of some of my best work!</p>
+                    <p>I create beautiful graphics for both digital and print media. Here are some of my best work!</p>
                 </div>
             </div>
         </div>
@@ -57,12 +63,12 @@ portfolio:
         
                         {% capture image_col %}
                         <div class="col-md-7 col-12 pc-image-col">
-                            {{ project.image | append:' class="portfolioimg" '| asset}}
+                            <a href="{{ project.link }}">{{ project.image | append:' class="portfolioimg" '| asset}}</a>
                         </div>
                         {% endcapture %} {% if project.imageLeft %} {{ image_col }} {% endif %}
         
                         <div class="col-md-5 col-12 content-col">
-                            <h3>{{ project.name}}</h3>
+                            <h3 id="{{ project.anchor }}">{{ project.name}}</h3>
                             <br>
                             <p>{{ project.description }}</p>
         

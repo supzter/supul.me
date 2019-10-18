@@ -6,34 +6,39 @@ navpage: ux
 portfolio:
 
 - name: Wittaya Aqua
+  anchor: wittaya-aqua
   imageLeft: false
   link: https://www.behance.net/gallery/86296487/Wittaya-Aqua-Web-application-UX
   description: |
-    AquaOP, Wittaya Aqua’s web app, allows farmers to get the best out of their farm data.
-    <br><br>I was responsible for coming up with the branding guidlines, and revamping the UX of the app and the site. The sheer amount of data visualization and management made this project an interesting one.
+    AquaOP is Wittaya’s software platform for aquaculture data analytics.
+    <br><br>As the Designer, I was responsible for coming up with the branding guidlines and revamping the UX of the app and the site. The sheer amount of data management and visualization required made this a challenging but an interesting task.
   image: wittaya_ux1.png
 
 - name: IAFFD (International Aquafeed Formulation)
+  anchor: iaffd
   imageLeft: true
   image: iaffd_ux1.png
   link: https://www.behance.net/gallery/86285069/IAFFD-Showcase-Website-Revamp
   description:  |
-    The International Aquaculture Feed Formulation Database (IAFFD) is an open access tool to aquaculture industry formulators. <br><br> I succesfully revamped the website while adhering to the exisinig branding.
+    The International Aquaculture Feed Formulation Database (IAFFD) is an open access tool used by aquaculture industry formulators. <br><br> As a Frontend Developer, I successfully modernized the website, adhering to the existing branding, while coordinating the effort with the backend engineers.
 
 - name: Papadamn
+  anchor: papadamn
   imageLeft: false
   image: papadamn_ux.png
   link: https://www.behance.net/gallery/86638771/Papadamncom-landing-page-and-merch-store
   description:  |
-    This was a personal project done for my Illustration/Comic brand “Papadamn”. I wanted a digital presence to promote my content and sell my merchandize.
-    <br><br>I also have plans to implement a custom comic reader, which will make an appearance in this list later!
+    This was a personal project done for my personal brand “Papadamn”. I wanted a digital presence to promote my content and sell my merchandize.
+    <br><br>I am also developing a custom comic reader for displaying my content which will make an appearance in this list later!
 
 - name: GoParkr
+  anchor: goparkr
   imageLeft: true
   image: goparkr_ux.png
   link: https://www.behance.net/gallery/70557555/GoParkr-UX
   description:  |
-    GoParkr allows users to search and book parking spots or list their own spot to make revenue. The project consisted of the development of a mobile app, a web app, and a marketing/app showcase site.
+    GoParkr allows users to search and book parking spots or list their own spot to make revenue. <br><br>
+    As the Chief Designer, I was in-charge of the branding, mobile app (Android and iOS) and web app UI/UX, and the marketing/app showcase site.
 ---
 
 <div class= "ux-wrapper subpage-wrapper" id= "1">
@@ -63,12 +68,12 @@ portfolio:
         
                         {% capture image_col %}
                         <div class="pc-image-col col-md-7 col-12">
-                            {{ project.image | append:' class="portfolioimg" '| asset}}
+                            <a href="{{project.link}}">{{ project.image | append:' class="portfolioimg" '| asset}}</a>
                         </div>
                         {% endcapture %} {% if project.imageLeft %} {{ image_col }} {% endif %}
         
                         <div class="col-md-5 col-12 content-col">
-                            <h3>{{ project.name}}</h3>
+                            <h3 id="{{project.anchor}}">{{ project.name}}</h3>
                             <br>
                             <p>{{ project.description }}</p>
         
