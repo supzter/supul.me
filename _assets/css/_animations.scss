@@ -660,6 +660,7 @@ bounce
 .bounce{
 	animation-name: bounce;
 	-webkit-animation-name: bounce;	
+	animation-iteration-count: infinite;
 
 	animation-duration: 1.6s;	
 	-webkit-animation-duration: 1.6s;
