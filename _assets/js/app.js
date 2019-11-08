@@ -30,8 +30,15 @@ function setEmailAndPhone() {
     }, 1000)
 }
 
+function setPageHeight(){
+    var videoHeight = document.getElementById('indexVideoContent').offsetHeight;
+    document.getElementById("indexVideo").style.height = videoHeight;
+
+}
+
 $(function() {
     stickyHeader();
     setEmailAndPhone();
+    setPageHeight();
     AOS.init();
 });

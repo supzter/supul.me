@@ -212,6 +212,17 @@
             }
         }
     }
+
+    @media only screen and (max-width: 1193px) and (min-width: 824px){
+        .index-hero{
+            min-height: 100vh;
+
+            .fullscreen-bg__video {
+                max-width: 200%;
+                z-index: -100;
+            }
+        }
+    }
 }
 
 /* Tooltip container */
