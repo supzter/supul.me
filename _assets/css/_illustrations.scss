@@ -1,4 +1,4 @@
-.drawing-wrapper{
+.illustration-wrapper{
     .subpage-hero{
         background-image: asset_url("uboy.png");
         
@@ -8,9 +8,16 @@
         background-image: asset_url("uboy.png");
     }
 
+    .content{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
     .project-wrapper{
         padding:0;
     }
 
-   
+    .portfolioimg{
+        max-width: 70%;
+    }
 }

@@ -1,0 +1,198 @@
+---
+
+layout: default
+navpage: drawing
+
+column1:
+- image: drawing1.jpg
+  link: https://www.artstation.com/artwork/e0N5gw
+- image: drawing2.jpg
+  link: https://www.artstation.com/artwork/e0N5gw
+- image: drawing16.jpg
+  link: https://www.artstation.com/artwork/3on8yv
+- image: drawing3.jpg
+
+column2:
+- image: drawing5.jpg
+  link: https://www.artstation.com/artwork/DxVNZR
+- image: drawing7.jpg
+  link: https://www.artstation.com/artwork/babExm
+- image: drawing10.jpg
+  link: https://www.artstation.com/artwork/v18Lk3
+- image: drawing11.jpg
+  link: https://www.artstation.com/artwork/bagnkk
+
+column3:
+
+- image: drawing4.jpg
+  link: https://www.artstation.com/artwork/Yavzyd
+- image: drawing6.jpg
+  link: https://www.artstation.com/artwork/Yavzyd
+- image: drawing14.jpg
+- image: drawing15.jpg
+  link: https://www.artstation.com/artwork/xzAWBO
+- image: drawing12.jpg
+  link: https://www.artstation.com/artwork/ZLOeG
+
+
+portfolio:
+
+- name: Sakkai Muniyai
+  type: Comic
+  imageLeft: true
+  image: smCover1.png
+  link: https://www.facebook.com/pg/papadamnarts/photos/?tab=album&album_id=1345370908899912
+  description:  |
+   “Sakkai Muniyai” is a comic series completely illustrated and written by me. It has managed to attract a lot of dedicated fans and become of the most popular long-running comic series in Sri Lanka.
+
+- name: Pizza Tower
+  type: Game Asset Illustration
+  imageLeft: false
+  image: chef.png
+  link: https://play.google.com/store/apps/details?id=com.appscurve.pizzatower&hl=en&fbclid=IwAR1-CRY9HRnem_VgsNgr9t4b34zJWib7l3HIwqxiokoF2pGTWEOctVFYYVo
+  description:  |
+   Pizza tower is a single player mobile game. I illustrated their game characters including the chef and customers.
+    
+- name: Create A Scene by Oxfam in Sri Lanka
+  type: General Illustration
+  imageLeft: true
+  image: createascene.png
+  link: https://www.behance.net/gallery/86640061/CreateAScene-campaign-Illustrations
+  description: |
+    <a href= "https://www.facebook.com/createascenelk/" target="parent">#CreateAScene</a> is a campaign launched by Oxfam in Sri Lanka to raise awareness about the harassment faced by women and children when using public transit. 
+    <br><br>I was responsible for creating the illustrations for the entire campaign.
+
+- name: Wittaya Aqua Infographics
+  type: Infographics
+  imageLeft: false
+  image: wittaya_drawing.png
+  link: https://www.behance.net/gallery/83178429/Wittaya-Aqua-Business-Illustrations
+  description:  |
+    These infographics were made for clients and investor pitches to visually demonstrate how Wittaya Aqua influences the aquaculture supply chain.
+
+- name: Mosaic Technical Illustrations
+  type: Technical Illustration
+  imageLeft: true
+  image: mosaic_drawing.png
+  link: https://www.behance.net/gallery/70533773/Mosaic-Manufacturing-Getting-Started-Guides
+  description:  |
+    I created custom illustrations to be used in their user manuals and tutorials.
+
+- name: Papadamn
+  imageLeft: false
+  type: Comic
+  link: https://papadamn.com/
+  description: |
+    I create various short comics and illustrations under the pen name “Papadamn”. I use this platform to express myself through satirical social commentary. <br><br>
+    I create content to raise awareness on various social causes that I believe in such as mental health, LGBTIQ+ issues, suicide prevention, and breast cancer.
+  image: papadamnstuff.png
+  
+---
+
+<div class= "illustration-wrapper subpage-wrapper">
+    {% include navigation.html %}
+    <div class= "hero subpage-hero">
+        <div class="height-mark"></div>
+        <div class= "container section subpage-section">
+            <div class= "row align-items-center justify-content-center">
+                <div class= "col-12 col-md-5">
+                    <h1>Illustrations</h1>
+                    <br>
+                    <p>Illustrating is more than just a job for me. It is my favorite past-time activity. Here are some of my favorite illustrations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class= "content">
+        <div class= "illustration-grid-wrapper">
+            <div class="row justify-content-center" data-aos="fade-up">
+               
+                <div class= "col-md-3 col-12 mb-3">
+                    {% for column1 in page.column1 %}
+                    <a href="{{column1.link}}">{{ column1.image | append:' class="img-fluid mb-3" '| asset}}</a>
+                    {% endfor %}
+                </div>
+                <div class= "col-md-3 col-12 mb-3">
+                    {% for column2 in page.column2 %}
+                    <a href="{{column2.link}}">{{ column2.image | append:' class="img-fluid mb-3" '| asset}}</a>
+                    {% endfor %}
+                </div>
+                <div class= "col-md-3 col-12 mb-3">
+                    {% for column3 in page.column3 %}
+                    <a href="{{column3.link}}">{{ column3.image | append:' class="img-fluid mb-3" '| asset}}</a>
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+
+        <div class= "illustration-projects-wrapper">
+            <div class= "portfolio">
+                <div class="portfolio-content-wrapper">
+        
+                    {% for project in page.portfolio %}
+                
+                    <div class="project-wrapper">
+                        <div class="container section project-section">
+        
+                            <div class="row row-eq-height justify-content-center align-items-center" data-aos="fade-up">
+                
+                                {% capture image_col %}
+                                <div class="col-md-7 col-12 pc-image-col">
+                                    <a href="{{project.link}}">{{ project.image | append:' class="portfolioimg" '| asset}}</a>
+                                </div>
+                                {% endcapture %} {% if project.imageLeft %} {{ image_col }} {% endif %}
+                
+                                <div class="col-md-5 col-12 content-col">
+                                    <h3>{{ project.name}}</h3>
+                                    <br>
+                                    <h5>{{ project.type }}</h5>
+                                    <br>
+                                    <p>{{ project.description }}</p>
+                
+                                    {% if project.link.size > 0 %}
+                                    <a href= {{project.link}} target="_blank">
+                                    <button class="btn btn-primary btn-big btn-fill">See more</button>
+                                    </a>
+                                    <br>
+                                    {% endif %}
+                                </div>
+                
+                                {% if project.imageLeft == false %} {{ image_col }} {% endif %}
+                                
+                                <div class="col-12 mobile-image-col">
+                                    {{ project.image | append:' class="portfolioimg-mobile" '| asset}}
+                                </div>
+        
+                                <div class= "col-12">
+                                        <hr>
+                                </div>
+                                
+                
+                            </div>
+                        </div>
+                    </div>
+        
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class= "cta">
+        <div class= "container section subpage-section">
+            <div class= "row align-items-center justify-content-center">
+                <div class= "col-md-7">
+                    <h1>Wait, there's more!</h1>
+                    <br>
+                    <p>Want to see more of my Illustrations?</p>
+                    <br>
+                    <a href= "https://www.artstation.com/supzter" target= "parent"><button class="btn btn-primary btn-big btn-fill btn-cta">Visit my Artstation</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
