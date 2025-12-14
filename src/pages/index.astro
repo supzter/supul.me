@@ -1,0 +1,99 @@
+---
+import HomeLayout from '../layouts/HomeLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<HomeLayout title="Supul Rajapakse - Portfolio">
+  <!-- Hero Section -->
+  <section class="min-h-[80vh] flex items-center justify-center px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        Supul Rajapakse
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
+        Software Engineer & Full Stack Developer
+      </p>
+      <p class="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+        Passionate about building elegant solutions to complex problems. 
+        Specializing in web development, cloud architecture, and modern JavaScript frameworks.
+      </p>
+      <div class="flex gap-4 justify-center">
+        <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+          View Projects
+        </a>
+        <a href="#contact" class="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <ProjectCard 
+        title="Project One"
+        description="A full-stack web application built with modern technologies, featuring real-time updates and seamless user experience."
+        tags={["React", "Node.js", "PostgreSQL"]}
+        link="https://example.com"
+        github="https://github.com/rajiteh"
+      />
+      <ProjectCard 
+        title="Project Two"
+        description="Cloud-native microservices architecture with automated deployment pipelines and comprehensive monitoring."
+        tags={["TypeScript", "AWS", "Docker"]}
+        github="https://github.com/rajiteh"
+      />
+      <ProjectCard 
+        title="Project Three"
+        description="Mobile-first progressive web app with offline capabilities and push notifications."
+        tags={["Vue.js", "Firebase", "PWA"]}
+        link="https://example.com"
+      />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-white dark:bg-gray-800 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
+      <div class="prose prose-lg dark:prose-invert mx-auto">
+        <p>
+          I'm a software engineer with a passion for creating intuitive and performant web applications.
+          With expertise in full-stack development, I enjoy working across the entire technology stack
+          to bring ideas to life.
+        </p>
+        <p>
+          My experience spans from building responsive front-end interfaces to designing scalable
+          back-end systems and deploying applications to the cloud. I'm constantly learning new
+          technologies and best practices to deliver high-quality software solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <h2 class="text-4xl font-bold mb-8 text-center">Get in Touch</h2>
+    <div class="text-center">
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+        I'm always interested in hearing about new opportunities and projects.
+      </p>
+      <div class="flex gap-6 justify-center">
+        <a href="https://github.com/rajiteh" target="_blank" rel="noopener noreferrer" 
+           class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/supul" target="_blank" rel="noopener noreferrer"
+           class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+          LinkedIn
+        </a>
+        <a href="mailto:hello@supul.dev"
+           class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
+          Email
+        </a>
+      </div>
+    </div>
+  </section>
+</HomeLayout>

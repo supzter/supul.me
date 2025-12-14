@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Supul's Portfolio - Software Engineer & Developer" } = Astro.props;
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-950 text-gray-900 dark:text-gray-100 min-h-screen">
+    <slot />
+    <footer class="border-t border-gray-200 dark:border-gray-800 mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <p class="text-center text-gray-600 dark:text-gray-400">
+          © {new Date().getFullYear()} Supul Rajapakse. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
