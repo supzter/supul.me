@@ -4,9 +4,10 @@ interface Props {
   subtitle?: string;
   description?: string;
   heroImage?: string;
+  heroImageSize?: string;
 }
 
-const { title, subtitle, description = "Portfolio Project - Supul Amarakoon", heroImage } = Astro.props;
+const { title, subtitle, description = "Portfolio Project - Supul Amarakoon", heroImage, heroImageSize = "max-w-[80%] md:max-w-full" } = Astro.props;
 
 import BaseLayout from './BaseLayout.astro';
 import NavBar from '../components/NavBar.astro';
@@ -38,7 +39,7 @@ import ContactCTA from '../components/ContactCTA.astro';
             <img
               src={heroImage}
               alt={title}
-              class="max-w-[80%] md:max-w-full"
+              class={heroImageSize}
               height="50%"
             />
           </div>
