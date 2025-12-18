@@ -1,5 +1,7 @@
 ---
 import PortfolioDetail from '../layouts/PortfolioDetail.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <PortfolioDetail title="Scotiabank Projects">
@@ -17,7 +19,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
         </div>
         <!-- Logo: 4/12 on desktop, below text on mobile -->
         <div class="md:col-span-4 flex justify-center md:justify-end">
-          <img src="scotia/scotiabank-logo.png" alt="Scotiabank Logo" class="w-40 md:w-56 h-auto" />
+          <img src={`${base}scotia/scotiabank-logo.png`} alt="Scotiabank Logo" class="w-40 md:w-56 h-auto" />
         </div>
       </div>
     </div>

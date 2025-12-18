@@ -1,8 +1,11 @@
 ---
 import PortfolioDetail from '../layouts/PortfolioDetail.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
-<PortfolioDetail title="ETF Dashboard" heroImage="etf/etf-dashboard-hero.png">
+<PortfolioDetail title="ETF Dashboard" heroImage={`${base}etf/etf-dashboard-hero.png`}>
+  <!-- Quick Overview Section -->
   <section class="py-20 bg-white overview-section">
     <div class="w-full md:max-w-5xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">
@@ -76,7 +79,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
         </div>
         <div>
           <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src="etf/etf-at-a-glance.png" alt="ETF Performance Chart" class="etf-imgw-full" />
+            <img src={`${base}etf/etf-at-a-glance.png`} alt="ETF Performance Chart" class="etf-imgw-full" />
           </div>
         </div>
       </div>
@@ -89,7 +92,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       <div class="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
         <div class="hidden md:block">
           <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src="etf/performance-chart.png" alt="ETF Performance Chart" class="etf-img w-full" />
+            <img src={`${base}etf/performance-chart.png`} alt="ETF Performance Chart" class="etf-img w-full" />
           </div>
         </div>
         <div>
@@ -101,7 +104,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
           </div>
         </div>
         <div class="block md:hidden bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src="etf/performance-chart.png" alt="ETF Performance Chart" class="etf-img-mobile w-full" />
+            <img src={`${base}etf/performance-chart.png`} alt="ETF Performance Chart" class="etf-img-mobile w-full" />
           </div>
       </div>
     </div>
@@ -119,7 +122,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       </div>
       
       <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-        <img src="etf/pnl-table.png" alt="P/L Impact Table" class="etf-img w-full" />
+        <img src={`${base}etf/pnl-table.png`} alt="P/L Impact Table" class="etf-img w-full" />
       </div>
     </div>
   </section>

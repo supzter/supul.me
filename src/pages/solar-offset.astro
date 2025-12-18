@@ -1,8 +1,10 @@
 ---
 import PortfolioDetail from '../layouts/PortfolioDetail.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
-<PortfolioDetail title="Solar Offset Mobile App" heroImage="solar-offset/mobile-app-hero.png" heroImageSize="max-w-[70%]">
+<PortfolioDetail title="Solar Offset Mobile App" heroImage={`${base}solar-offset/mobile-app-hero.png`} heroImageSize="max-w-[70%]">
   <!-- Quick Overview Section -->
   <section class="py-20 bg-white overview-section">
     <div class="max-w-4xl mx-auto px-6">
@@ -64,10 +66,10 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       <!-- Problem Space Visualization -->
       <div class="grid md:grid-cols-2 gap-8 mb-12">
         <div class="bg-white rounded-lg overflow-hidden shadow-md">
-          <img src="solar-offset/empathy-mapping.png" alt="Empathy mapping" class="w-full" />
+          <img src={`${base}solar-offset/empathy-mapping.png`} alt="Empathy mapping" class="w-full" />
         </div>
         <div class="bg-white rounded-lg overflow-hidden shadow-md">
-          <img src="solar-offset/user-needs-discovery.png" alt="User needs discovery" class="w-full" />
+          <img src={`${base}solar-offset/user-needs-discovery.png`} alt="User needs discovery" class="w-full" />
         </div>
       </div>
       
@@ -100,7 +102,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       
       <!-- Design Iteration Image -->
       <div class="mb-12">
-        <img src="solar-offset/design-iteration.png" alt="Design iteration wireframes" class="w-full rounded-lg shadow-md" />
+        <img src={`${base}solar-offset/design-iteration.png`} alt="Design iteration wireframes" class="w-full rounded-lg shadow-md" />
       </div>
       
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mt-12">
@@ -123,7 +125,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       
       <!-- Technical Architecture Diagram -->
       <div class="bg-white rounded-lg overflow-hidden shadow-md">
-        <img src="solar-offset/technical-architecture-diagram.png" alt="Technical architecture" class="w-full" />
+        <img src={`${base}solar-offset/technical-architecture-diagram.png`} alt="Technical architecture" class="w-full" />
       </div>
 
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
@@ -151,7 +153,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
     <div class="max-w-5xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-center">
         <div class="p-12 rounded-2xl flex justify-center">
-          <img src="solar-offset/app-home-screen.png" alt="Home screen" class="max-w-xs drop-shadow-xl" height="70%" />
+          <img src={`${base}solar-offset/app-home-screen.png`} alt="Home screen" class="max-w-xs drop-shadow-xl" height="70%" />
         </div>
         <div>
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Home Screen</h3>
@@ -174,7 +176,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
           </p>
         </div>
         <div class="order-1 md:order-2 p-12 rounded-2xl flex justify-center">
-          <img src="solar-offset/app-submission-progress.png" alt="Progress screen" class="max-w-xs drop-shadow-xl" height="70%" />
+          <img src={`${base}solar-offset/app-submission-progress.png`} alt="Progress screen" class="max-w-xs drop-shadow-xl" height="70%" />
         </div>
       </div>
     </div>
@@ -185,7 +187,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
     <div class="max-w-5xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-center">
         <div class="p-12 rounded-2xl flex justify-center">
-          <img src="solar-offset/app-connectivity.png" alt="Connectivity screen" class="max-w-xs drop-shadow-xl" height="70%" />
+          <img src={`${base}solar-offset/app-connectivity.png`} alt="Connectivity screen" class="max-w-xs drop-shadow-xl" height="70%" />
         </div>
         <div>
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Inverter Connectivity Screen</h3>
@@ -208,7 +210,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
           </p>
         </div>
         <div class="order-1 md:order-2 p-12 rounded-2xl flex justify-center">
-          <img src="solar-offset/app-analytics.png" alt="Analytics screen" class="max-w-xs drop-shadow-xl" height="70%" />
+          <img src={`${base}solar-offset/app-analytics.png`} alt="Analytics screen" class="max-w-xs drop-shadow-xl" height="70%" />
         </div>
       </div>
     </div>
