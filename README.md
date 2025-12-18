@@ -86,7 +86,7 @@ This site deploys automatically via GitHub Actions when you push to `main` or `m
 1. Go to repository Settings → Pages
 2. Under "Build and deployment" → Source, select **GitHub Actions**
 3. Push to your repository - deployment starts automatically
-4. Your site will be live at `https://rajiteh.github.io/supul-portfolio`
+4. Your site will be live at `https://supzter.github.io/supul.me`
 
 **Configuration:**
 - Deployment workflow: `.github/workflows/deploy.yml`
