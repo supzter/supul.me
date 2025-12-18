@@ -4,13 +4,13 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
 
 <PortfolioDetail title="ETF Dashboard" heroImage="etf/etf-dashboard-hero.png">
   <!-- Quick Overview Section -->
-  <section class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6">
+  <section class="py-20 bg-white overview-section">
+    <div class="w-full md:max-w-5xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">
         Quick Overview
       </h2>
       
-      <div class="grid gap-y-6 md:grid-cols-[minmax(0,0.6fr)_minmax(0,1.4fr)] md:gap-x-10 items-start">
+      <div class="grid gap-y-3 md:gap-y-6 md:grid-cols-[minmax(0,0.6fr)_minmax(0,1.4fr)] md:gap-x-10 items-start">
         <!-- What is it? -->
         <h3 class="text-[#50A684] font-semibold mb-2 md:mb-0">What is it?</h3>
         <p class="text-gray-700 leading-relaxed border-b border-gray-200 pb-6 md:pb-4">
@@ -38,7 +38,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
 
   <!-- Introduction Section -->
   <section class="py-20 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-6">
+    <div class="w-full md:max-w-5xl mx-auto px-6 text-center md:text-left">
       <h2 class="text-4xl font-bold mb-8 text-gray-900">Introduction</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
         <p>
@@ -53,7 +53,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
 
   <!-- Data Displayed Section -->
   <section class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6">
+    <div class="w-full md:max-w-5xl mx-auto px-6 text-center md:text-left">
       <h2 class="text-4xl font-bold mb-12 text-gray-900">Data Displayed</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
         <p>
@@ -65,8 +65,8 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
 
   <!-- ETFs at a glance Section -->
   <section class="py-20 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="w-full md:max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
         <div>
           <h2 class="text-4xl font-bold mb-6 text-gray-900">ETFs at a Glance</h2>
           <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
@@ -77,7 +77,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
         </div>
         <div>
           <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src="etf/etf-at-a-glance.png" alt="ETF Performance Chart" class="w-full" />
+            <img src="etf/etf-at-a-glance.png" alt="ETF Performance Chart" class="etf-imgw-full" />
           </div>
         </div>
       </div>
@@ -86,28 +86,31 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
 
   <!-- ETF Performance Section -->
   <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
+    <div class="w-full md:max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
+        <div class="hidden md:block">
           <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src="etf/performance-chart.png" alt="ETF Performance Chart" class="w-full" />
+            <img src="etf/performance-chart.png" alt="ETF Performance Chart" class="etf-img w-full" />
           </div>
         </div>
         <div>
           <h2 class="text-4xl font-bold mb-6 text-gray-900">ETF Performance</h2>
           <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
             <p>
-              One of my favorite parts of the dashboard is the ETF performance chart. It highlights how a book performs over a selected time range, and the chip controls make it easy to compare multiple ETFs side-by-side if needed. It’s a compact way to explore trends without adding extra complexity.
+              One of my favorite parts of the dashboard is the ETF performance chart. It highlights how a book performs over a selected time range, and the chip controls make it easy to compare multiple ETFs side-by-side if needed. It's a compact way to explore trends without adding extra complexity.
             </p>
           </div>
         </div>
+        <div class="block md:hidden bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+            <img src="etf/performance-chart.png" alt="ETF Performance Chart" class="etf-img-mobile w-full" />
+          </div>
       </div>
     </div>
   </section>
 
   <!-- P/L Impact Table Section -->
   <section class="py-20 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="w-full md:max-w-6xl mx-auto px-6 text-center md:text-left">
       <h2 class="text-4xl font-bold mb-12 text-gray-900">P/L Impact Table</h2>
       
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
@@ -117,14 +120,14 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       </div>
       
       <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-        <img src="etf/pnl-table.png" alt="P/L Impact Table" class="w-full" />
+        <img src="etf/pnl-table.png" alt="P/L Impact Table" class="etf-img w-full" />
       </div>
     </div>
   </section>
 
   <!-- Proof-of-concept Section -->
   <section class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
+    <div class="w-full md:max-w-4xl mx-auto px-6 text-center md:text-left">
       <h2 class="text-4xl font-bold mb-12 text-gray-900 text-center">Proof-of-concept vs production</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
         <p>
