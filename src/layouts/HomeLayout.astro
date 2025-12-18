@@ -5,66 +5,14 @@ interface Props {
 }
 
 const { title, description = "Supul's Portfolio - Software Engineer & Developer" } = Astro.props;
-import '../styles/global.css';
+
+import BaseLayout from './BaseLayout.astro';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
-    <title>{title}</title>
-  </head>
-  <body class="bg-white text-gray-900 min-h-screen">
-    <!-- Navigation -->
-    <nav class="bg-white">
-      <div class="max-w-7xl mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-          <div class="flex gap-8 items-center">
-            <a href="/" class="text-xl font-bold text-gray-900">Home</a>
-            <a href="/#my-work" class="text-gray-700 hover:text-[#50A684] transition-colors">Design Portfolio</a>
-          </div>
-          <div>
-            <a href="/resume.pdf" class="px-5 py-2 bg-[#50A684] text-white rounded-full hover:bg-[#3D8268] transition-colors font-medium">
-              Resume
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <slot />
-
-    <!-- Footer -->
-    <footer class="bg-gradient-to-r from-[#4A9A7A] via-[#50A684] to-[#5BB28E] text-white py-12">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex justify-center items-center gap-8 mb-4">
-          <a href="https://www.behance.net/supulamaraae85" target="_blank" rel="noopener noreferrer" 
-             class="text-2xl font-bold hover:text-gray-200 transition-colors"
-             aria-label="Behance">
-            Be
-          </a>
-          <a href="https://www.linkedin.com/in/supul-achinthya-amarakoon-58aa25b6/" target="_blank" rel="noopener noreferrer"
-             class="text-2xl font-bold hover:text-gray-200 transition-colors"
-             aria-label="LinkedIn">
-            in
-          </a>
-          <a href="https://medium.com/@supul.amarakoon" target="_blank" rel="noopener noreferrer"
-             class="text-2xl font-bold hover:text-gray-200 transition-colors"
-             aria-label="Medium">
-            M
-          </a>
-        </div>
-        <p class="text-center text-sm text-white/80">
-          © {new Date().getFullYear()} Supul Amarakoon. All rights reserved.
-        </p>
-      </div>
-    </footer>
-  </body>
-</html>
+<BaseLayout {title} {description}>
+  <NavBar />
+  <slot />
+  <Footer />
+</BaseLayout>
