@@ -10,46 +10,42 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
         Quick Overview
       </h2>
       
-      <div class="space-y-6">
-        <div class="border-b border-gray-200 pb-6">
-          <h3 class="text-[#50A684] font-semibold mb-3">What is it?</h3>
-          <p class="text-gray-700 leading-relaxed">
-            A mobile-first app that tracks carbon credits, auto-ingests inverter data, and offers a robust help section for transparency.
-          </p>
-        </div>
-        
-        <div class="border-b border-gray-200 pb-6">
-          <h3 class="text-[#50A684] font-semibold mb-3">Target Audience</h3>
-          <p class="text-gray-700 leading-relaxed">
-            Homeowners and small business owners in the province of Alberta
-          </p>
-        </div>
-        
-        <div class="border-b border-gray-200 pb-6">
-          <h3 class="text-[#50A684] font-semibold mb-3">Interesting stuff I worked on</h3>
-          <p class="text-gray-700 leading-relaxed">
-            B2C applications, Data visualization and dashboards, Process tracking dashboards, Light mode, Mobile
-          </p>
-        </div>
-        
-        <div class="pb-6">
-          <h3 class="text-[#50A684] font-semibold mb-3">Year</h3>
-          <p class="text-gray-700 leading-relaxed">2025</p>
-        </div>
+      <!-- Grid layout for Quick Overview items -->
+      <div class="grid gap-y-6 md:grid-cols-[minmax(0,0.6fr)_minmax(0,1.4fr)] md:gap-x-10 items-start">
+        <!-- What is it? -->
+        <h3 class="text-[#50A684] font-semibold mb-2 md:mb-0">What is it?</h3>
+        <p class="text-gray-700 leading-relaxed border-b border-gray-200 pb-6 md:pb-4">
+          A mobile-first app that tracks carbon credits, auto-ingests inverter data, and offers a robust help section for transparency.
+        </p>
+
+        <!-- Target Audience -->
+        <h3 class="text-[#50A684] font-semibold mb-2 md:mb-0">Target Audience</h3>
+        <p class="text-gray-700 leading-relaxed border-b border-gray-200 pb-6 md:pb-4">
+          Homeowners and small business owners in the province of Alberta
+        </p>
+
+        <!-- Interesting stuff I worked on -->
+        <h3 class="text-[#50A684] font-semibold mb-2 md:mb-0">Interesting stuff I worked on</h3>
+        <p class="text-gray-700 leading-relaxed border-b border-gray-200 pb-6 md:pb-4">
+          B2C applications, Data visualization and dashboards, Process tracking dashboards, Light mode, Mobile
+        </p>
+
+        <!-- Year -->
+        <h3 class="text-[#50A684] font-semibold mb-2 md:mb-0">Year</h3>
+        <p class="text-gray-700 leading-relaxed">
+          2025
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Introduction Section -->
   <section class="py-24 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8 text-gray-900">Introduction</h2>
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-8 text-gray-900">Introduction</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
         <p>
-          Solar Offset is a mobile-first hybrid app that assists the organic traveler (like you through a PC and API connections, provides third-party data aggregation from different carbon credit and renewable sources, and provides a visual roadmap to zero carbon offsetting. It aims to promote transparency in their carbon credit impact—and where the dollars they spend end up going.
-        </p>
-        <p>
-          I started the project as the solo Product Designer and carried it through to development and delivery. By the end of the project, I was making product decisions as a Product Manager in a team of four developers and a designer, and was the face of the product for the stakeholder.
+          Solar Offset is a mobile-first hybrid app that automatically ingests inverter data through IoT and API connections, converts those inputs into verified carbon credits, and presents everything through transparent dashboards with compliance-ready records. A built-in help section reinforces clarity end-to-end, making carbon tracking and verification easy to access and audit on the go.
         </p>
       </div>
     </div>
@@ -61,7 +57,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       <h2 class="text-3xl font-bold mb-12 text-gray-900">The Problem Space</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
         <p>
-          To understand the problem, we did by-sprint to locate Planet Offset's customers: retailers where the current segment breaks down, and according to data from Sociable. Together, we highlighted the best user journey, so the user's carbon offsetting experience is realistic through the customer's needs and how the product fits with their budget to reduce their global footprint.
+          To understand the problem, we directly spoke to Solar Offset’s customers about where the current experience breaks down, and speaking with the founders to understand the operational challenges happening behind the scenes. From there, we mapped what we learned onto a Jobs-to-be-Done board and a Digital Business Model Canvas to get a clear picture of how the business currently works, what’s manual, and where the friction lives.
         </p>
       </div>
       
@@ -77,10 +73,13 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
         <p>
-          A flow diagram sketched exactly. Solar Offset is home to hitting a windfall offering every part of their journey, a financial credit that they're awarded through carbon tracking to let them, in a realistic, user-friendly product.
+          A few themes surfaced quickly. Solar Offset is close to hitting a technical ceiling: every part of their workflow is manual, and scaling to more customers would strain the team. On the user side, homeowners deal with scattered processes, limited visibility, and manual data collection: all of which limit the value they can get from the service.
         </p>
         <p>
-          Using these insights, we defined our <strong>Staged Product Opportunity</strong>: take the current Solar Offset ecosystem boost plans in four throughout a beautiful, human-centered product that provides users with a realistic option for tracking carbon offsets while keeping an open-budget data flow tracking.
+          Using these insights, we defined our <b>Digital Product Opportunity: take the systems Solar Offset already has (plus a few thoughtfully chosen additions) and turn them into a scalable, user-friendly product.</b> 
+        </p>
+        <p>
+          This led to our recommendation: build a cloud-native application that automatically pulls data from solar energy inverters to streamline collection, provide near-real-time carbon credit tracking, and offer clear financial forecasting. The result would increase transparency and trust for users while giving Solar Offset the infrastructure it needs to grow sustainably.
         </p>
       </div>
     </div>
@@ -92,7 +91,10 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       <h2 class="text-3xl font-bold mb-12 text-gray-900">Design Iteration 1</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
         <p>
-          Before starting anything, we built out a Figma requirements document that captured functional and non-functional requirements, outlined user stories, and mapped the foundational user journey. This captured the foundational and non-functional requirements with the product to the optimal guidance for the user's journey.
+          First, we built out a living requirements document that captured functional and non-functional requirements, outlined use cases, and mapped key task flows. This became the foundation for the prototype and ensured the whole team was aligned on what the product needed to do and why.
+        </p>
+        <p>
+          Additionally, we developed storyboards on typical user interactions with the product to further understand the user’s journey.
         </p>
       </div>
       
@@ -103,7 +105,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mt-12">
         <p>
-          With the requirements in place, we developed a low-fidelity prototype and brought it into testing with users following the completion. It helped us ensure users could complete the typical task, flow interactions with the product for better understand the user's journey.
+          With the requirements in place, we developed a low-fidelity prototype and brought it into testing with six users following our usability testing plan. Overall, users navigated the experience well, but the testing surfaced a few areas that needed refinement, particularly around how the carbon credit process was presented and tracked. These insights would go on to shape our next iteration.
         </p>
       </div>
     </div>
@@ -115,7 +117,7 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       <h2 class="text-3xl font-bold mb-12 text-gray-900">Technical Analysis + refining the prototype</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
         <p>
-          Here, we assessed the technical feasibility and defined the product's architecture. After evaluating several architectural approaches, we settled on a single-page hybrid front-end partnered with a microservices back-end. This gave us the flexibility we needed for the reflecting, allowing the team to build efficiently while still delivering a polished product experience.
+          Next, we assessed the technical feasibility and defined the product’s architecture. After evaluating several architectural approaches, we landed on a hybrid style combining layered and object-oriented patterns. This gave us the cohesion and low coupling needed to support performance, reliability, and future scalability.
         </p>
       </div>
       
@@ -123,18 +125,33 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
       <div class="bg-white rounded-lg overflow-hidden shadow-md">
         <img src="/solar-offset/technical-architecture-diagram.png" alt="Technical architecture" class="w-full" />
       </div>
+
+      <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
+        <p>
+          During this stage, I worked closely with our Technical Architect to validate that the design concepts were achievable within Solar Offset’s constraints. We aligned on using the Material UI library as the foundation for the interface, allowing the team to build efficiently while still delivering a polished, consistent experience. Customization would be limited to brand colours and a few tailored illustrations, keeping development practical without compromising quality.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Final Prototype Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-gray-900">Final Prototype</h2>
+      <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
+        <p>
+          The final prototype showcases the culmination of our design and development efforts, presenting a polished and user-friendly interface for the Solar Offset mobile app. Below are the key screens from the prototype:
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Home Screen -->
   <section class="py-24 bg-gray-50">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-16 text-gray-900">The Final Prototype</h2>
-      
-      <!-- Home Screen -->
-      <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
-        <div class="bg-gradient-to-br from-[#E8F5F1] to-[#D8F0E8] p-12 rounded-2xl flex justify-center">
-          <img src="/solar-offset/app-home-screen.png" alt="Home screen" class="w-full max-w-xs drop-shadow-xl" />
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="p-12 rounded-2xl flex justify-center">
+          <img src="/solar-offset/app-home-screen.png" alt="Home screen" class="max-w-xs drop-shadow-xl" height="70%" />
         </div>
         <div>
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Home Screen</h3>
@@ -143,24 +160,32 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
           </p>
         </div>
       </div>
-      
-      <!-- Submission Progress Screen -->
-      <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
+    </div>
+  </section>
+  
+  <!-- Submission Progress Screen -->
+  <section class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
         <div class="order-2 md:order-1">
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Submission Progress Screen</h3>
           <p class="text-gray-700 mb-4">
             The submission progress screen digs into the details of what's happening with a user's carbon credits, filling the transparency gap we uncovered in interviews. Each step is still ahead, as the flow is easy to follow without extra explanation. It's a simple flow to help users see where they are in the loop and understand how their credits are moving through the process.
           </p>
         </div>
-        <div class="order-1 md:order-2 bg-gradient-to-br from-[#E8F5F1] to-[#D8F0E8] p-12 rounded-2xl flex justify-center">
-          <img src="/solar-offset/app-submission-progress.png" alt="Progress screen" class="w-full max-w-xs drop-shadow-xl" />
+        <div class="order-1 md:order-2 p-12 rounded-2xl flex justify-center">
+          <img src="/solar-offset/app-submission-progress.png" alt="Progress screen" class="max-w-xs drop-shadow-xl" height="70%" />
         </div>
       </div>
-      
-      <!-- Inverter Connectivity Screen -->
-      <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
-        <div class="bg-gradient-to-br from-[#E8F5F1] to-[#D8F0E8] p-12 rounded-2xl flex justify-center">
-          <img src="/solar-offset/app-connectivity.png" alt="Connectivity screen" class="w-full max-w-xs drop-shadow-xl" />
+    </div>
+  </section>
+  
+  <!-- Inverter Connectivity Screen -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="p-12 rounded-2xl flex justify-center">
+          <img src="/solar-offset/app-connectivity.png" alt="Connectivity screen" class="max-w-xs drop-shadow-xl" height="70%" />
         </div>
         <div>
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Inverter Connectivity Screen</h3>
@@ -169,8 +194,12 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
           </p>
         </div>
       </div>
-      
-      <!-- Analytics -->
+    </div>
+  </section>
+  
+  <!-- Analytics -->
+  <section class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-center">
         <div class="order-2 md:order-1">
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Analytics</h3>
@@ -178,22 +207,10 @@ import PortfolioDetail from '../layouts/PortfolioDetail.astro';
             This detailed section gives users a closer look at their energy production, platform, and an estimate of their expected payout. A simple tax-year selector at the top lets you toggle through any prior year you want. While the functionality is easily accessible, making simple yearly comparisons almost trivial.
           </p>
         </div>
-        <div class="order-1 md:order-2 bg-gradient-to-br from-[#E8F5F1] to-[#D8F0E8] p-12 rounded-2xl flex justify-center">
-          <img src="/solar-offset/app-analytics.png" alt="Analytics screen" class="w-full max-w-xs drop-shadow-xl" />
+        <div class="order-1 md:order-2 p-12 rounded-2xl flex justify-center">
+          <img src="/solar-offset/app-analytics.png" alt="Analytics screen" class="max-w-xs drop-shadow-xl" height="70%" />
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Curious to Connect Section -->
-  <section class="py-20 bg-gradient-to-r from-[#4A9A7A] via-[#50A684] to-[#5BB28E] text-white">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">
-        Curious to connect?
-      </h2>
-      <a href="/#contact" class="inline-block px-8 py-3 bg-white text-[#50A684] rounded-full hover:bg-gray-100 transition-colors font-medium text-lg">
-        Let's get in touch :)
-      </a>
     </div>
   </section>
 </PortfolioDetail>

@@ -42,26 +42,43 @@ import '../styles/global.css';
     </nav>
 
     <!-- Hero Header -->
-    <section class="bg-gradient-to-r from-[#4A9A7A] via-[#50A684] to-[#5BB28E] text-white py-16 md:py-20">
-      <div class="max-w-7xl mx-auto px-6">
+    <section class="bg-gradient-to-r from-[#3F8B63] to-[#69A546] text-white py-16 md:py-20">
+      <div class="max-w-5xl mx-auto px-6">
         {heroImage ? (
-          <div class="flex items-center justify-between gap-12">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold flex-1">
-              {title}
-            </h1>
-            <div class="flex-shrink-0">
-              <img src={heroImage} alt={title} class="w-64 md:w-80 lg:w-96 drop-shadow-2xl" />
+          <div class="grid grid-cols-1 md:grid-cols-12 items-center gap-10">
+            <!-- Text column: 4/12 on desktop, full-width on mobile -->
+            <div class="md:col-span-7">
+              <h1 class="text-4xl md:text-4xl lg:text-5xl font-bold">
+                {title}
+              </h1>
+              {subtitle && (
+                <p class="mt-4 text-lg md:text-xl text-white/90">
+                  {subtitle}
+                </p>
+              )}
+            </div>
+            <!-- Image column: 8/12 on desktop, full-width on mobile -->
+            <div class="md:col-span-5 flex justify-left md:justify-end">
+              <img 
+              src={heroImage} 
+              alt={title} 
+              class="max-w-xl md:max-w-2xl" 
+              height="50%"
+
+              />
             </div>
           </div>
         ) : (
-          <h1 class="text-4xl md:text-6xl font-bold text-center">
-            {title}
-          </h1>
-        )}
-        {subtitle && !heroImage && (
-          <p class="text-xl md:text-2xl text-center mt-4 text-white/90">
-            {subtitle}
-          </p>
+          <>
+            <h1 class="text-4xl md:text-6xl font-bold text-center">
+              {title}
+            </h1>
+            {subtitle && (
+              <p class="text-xl md:text-2xl text-center mt-4 text-white/90">
+                {subtitle}
+              </p>
+            )}
+          </>
         )}
       </div>
     </section>
@@ -69,21 +86,37 @@ import '../styles/global.css';
     <!-- Main Content -->
     <slot />
 
+    <!-- Curious to Connect Section (shared across portfolio pages) -->
+    <section class="py-20 bg-gradient-to-r from-[#4A9A7A] via-[#50A684] to-[#5BB28E] text-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Curious to connect?
+        </h2>
+        <a
+          href="mailto:supul.amarakoon@gmail.com"
+          target="_parent"
+          class="inline-block px-8 py-3 bg-white text-[#50A684] rounded-full hover:bg-gray-100 transition-colors font-medium text-lg"
+        >
+          Let's get in touch :)
+        </a>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gradient-to-r from-[#4A9A7A] via-[#50A684] to-[#5BB28E] text-white py-12">
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex justify-center items-center gap-8 mb-4">
-          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" 
+          <a href="https://www.behance.net/supulamaraae85" target="_blank" rel="noopener noreferrer" 
              class="text-2xl font-bold hover:text-gray-200 transition-colors"
              aria-label="Behance">
             Be
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/in/supul-achinthya-amarakoon-58aa25b6/" target="_blank" rel="noopener noreferrer"
              class="text-2xl font-bold hover:text-gray-200 transition-colors"
              aria-label="LinkedIn">
             in
           </a>
-          <a href="https://medium.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://medium.com/@supul.amarakoon" target="_blank" rel="noopener noreferrer"
              class="text-2xl font-bold hover:text-gray-200 transition-colors"
              aria-label="Medium">
             M
