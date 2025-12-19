@@ -1,10 +1,13 @@
 ---
 import PortfolioDetail from '../layouts/PortfolioDetail.astro';
 
-const base = import.meta.env.BASE_URL;
+import heroImage from '../../public/etf/etf-dashboard-hero.png';
+import etfAtAGlance from '../../public/etf/etf-at-a-glance.png';
+import performanceChart from '../../public/etf/performance-chart.png';
+import pnlTable from '../../public/etf/pnl-table.png';
 ---
 
-<PortfolioDetail title="ETF Dashboard" heroImage={`${base}etf/etf-dashboard-hero.png`}>
+<PortfolioDetail title="ETF Dashboard" heroImage={heroImage.src}>
   <!-- Quick Overview Section -->
   <section class="py-20 bg-white overview-section">
     <div class="w-full md:max-w-5xl mx-auto px-6">
@@ -79,7 +82,7 @@ const base = import.meta.env.BASE_URL;
         </div>
         <div>
           <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src={`${base}etf/etf-at-a-glance.png`} alt="ETF Performance Chart" class="etf-imgw-full" />
+            <img src={etfAtAGlance.src} alt="ETF Performance Chart" class="etf-imgw-full" />
           </div>
         </div>
       </div>
@@ -92,7 +95,7 @@ const base = import.meta.env.BASE_URL;
       <div class="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
         <div class="hidden md:block">
           <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src={`${base}etf/performance-chart.png`} alt="ETF Performance Chart" class="etf-img w-full" />
+            <img src={performanceChart.src} alt="ETF Performance Chart" class="etf-img w-full" />
           </div>
         </div>
         <div>
@@ -104,7 +107,7 @@ const base = import.meta.env.BASE_URL;
           </div>
         </div>
         <div class="block md:hidden bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src={`${base}etf/performance-chart.png`} alt="ETF Performance Chart" class="etf-img-mobile w-full" />
+            <img src={performanceChart.src} alt="ETF Performance Chart" class="etf-img-mobile w-full" />
           </div>
       </div>
     </div>
@@ -122,7 +125,7 @@ const base = import.meta.env.BASE_URL;
       </div>
       
       <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-        <img src={`${base}etf/pnl-table.png`} alt="P/L Impact Table" class="etf-img w-full" />
+        <img src={pnlTable.src} alt="P/L Impact Table" class="etf-img w-full" />
       </div>
     </div>
   </section>
