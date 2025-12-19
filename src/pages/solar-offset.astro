@@ -50,7 +50,7 @@ import appAnalytics from '../../public/solar-offset/app-analytics.png';
   </section>
 
   <!-- Introduction Section -->
-  <section class="py-24 bg-gray-50">
+  <section class="py-12 md:py-24 bg-gray-50">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-4xl font-bold mb-8 text-gray-900 text-center">Introduction</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
@@ -62,7 +62,7 @@ import appAnalytics from '../../public/solar-offset/app-analytics.png';
   </section>
 
   <!-- The Problem Space Section -->
-  <section class="py-24 bg-white">
+  <section class="py-12 md:py-24 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-gray-900 text-center">The Problem Space</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
@@ -96,7 +96,7 @@ import appAnalytics from '../../public/solar-offset/app-analytics.png';
   </section>
 
   <!-- Design Iteration Section -->
-  <section class="py-24 bg-gray-50">
+  <section class="py-12 md:py-24 bg-gray-50">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-gray-900 text-center">Design Iteration 1</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
@@ -122,7 +122,7 @@ import appAnalytics from '../../public/solar-offset/app-analytics.png';
   </section>
 
   <!-- Technical Analysis Section -->
-  <section class="py-24 bg-white">
+  <section class="py-12 md:py-24 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-gray-900 text-center">Technical Analysis + refining the prototype</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
@@ -145,7 +145,7 @@ import appAnalytics from '../../public/solar-offset/app-analytics.png';
   </section>
 
   <!-- Final Prototype Section -->
-  <section class="py-24 bg-gray-50">
+  <section class="py-12 md:py-24 bg-gray-50">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-3xl font-bold mb-12 text-gray-900 text-center">Final Prototype</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
@@ -157,11 +157,11 @@ import appAnalytics from '../../public/solar-offset/app-analytics.png';
   </section>
 
   <!-- Home Screen -->
-  <section class="py-24 bg-gray-50">
+  <section class="py-12 md:py-24 bg-gray-50">
     <div class="max-w-5xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-center">
-        <div class="p-12 rounded-2xl flex justify-center">
-          <img src={appHomeScreen.src} alt="Home screen" class="solar-screen max-w-xs drop-shadow-xl" style="height: 80%;" />
+        <div class="rounded-2xl flex justify-center">
+          <img src={appHomeScreen.src} alt="Home screen" class="solar-screen max-w-xs drop-shadow-xl" style="max-width: 80%;" />
         </div>
         <div>
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Home Screen</h3>
@@ -174,7 +174,7 @@ import appAnalytics from '../../public/solar-offset/app-analytics.png';
   </section>
   
   <!-- Submission Progress Screen -->
-  <section class="py-24 bg-white">
+  <section class="py-12 md:py-24 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-center">
         <div class="order-2 md:order-1">
@@ -183,19 +183,19 @@ import appAnalytics from '../../public/solar-offset/app-analytics.png';
             The submission progress screen digs into the details of what's happening with a user's carbon credits, filling the transparency gap we uncovered in interviews. Each step is still ahead, as the flow is easy to follow without extra explanation. It's a simple flow to help users see where they are in the loop and understand how their credits are moving through the process.
           </p>
         </div>
-        <div class="order-1 md:order-2 p-12 rounded-2xl flex justify-center">
-          <img src={appSubmission.src} alt="Progress screen" class="solar-screen max-w-xs drop-shadow-xl" style="height: 80%;" />
+        <div class="order-1 md:order-2 rounded-2xl flex justify-center">
+          <img src={appSubmission.src} alt="Progress screen" class="solar-screen max-w-xs drop-shadow-xl" style="max-width: 80%;" />
         </div>
       </div>
     </div>
   </section>
   
   <!-- Inverter Connectivity Screen -->
-  <section class="py-24 bg-gray-50">
+  <section class="py-12 md:py-24 bg-gray-50">
     <div class="max-w-5xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-center">
-        <div class="p-12 rounded-2xl flex justify-center">
-          <img src={appConnectivity.src} alt="Connectivity screen" class="solar-screen max-w-xs drop-shadow-xl" style="height: 80%;" />
+        <div class="rounded-2xl flex justify-center">
+          <img src={appConnectivity.src} alt="Connectivity screen" class="solar-screen max-w-xs drop-shadow-xl" style="max-width: 80%;" />
         </div>
         <div>
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Inverter Connectivity Screen</h3>
@@ -217,8 +217,8 @@ import appAnalytics from '../../public/solar-offset/app-analytics.png';
             This detailed section gives users a closer look at their energy production, platform, and an estimate of their expected payout. A simple tax-year selector at the top lets you toggle through any prior year you want. While the functionality is easily accessible, making simple yearly comparisons almost trivial.
           </p>
         </div>
-        <div class="order-1 md:order-2 p-12 rounded-2xl flex justify-center">
-          <img src={appAnalytics.src} alt="Analytics screen" class="solar-screen max-w-xs drop-shadow-xl" style="height: 80%;" />
+        <div class="order-1 md:order-2 rounded-2xl flex justify-center">
+          <img src={appAnalytics.src} alt="Analytics screen" class="solar-screen max-w-xs drop-shadow-xl" style="max-width: 80%;" />
         </div>
       </div>
     </div>
