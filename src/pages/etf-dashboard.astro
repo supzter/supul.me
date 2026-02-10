@@ -41,102 +41,166 @@ import pnlTable from '../../public/etf/pnl-table.png';
     </div>
   </section>
 
-  <!-- Introduction Section -->
+   <!-- Introduction Section -->
   <section class="py-20 bg-gray-50">
-    <div class="w-full md:max-w-5xl mx-auto px-6 text-center md:text-left">
+    <div class="w-full md:max-w-5xl mx-auto px-6">
       <h2 class="text-4xl font-bold mb-8 text-gray-900 text-center">Introduction</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
         <p>
-          This project is a dashboard designed to monitor ETF trades at a glance. It brings together the key metrics: market value, returns, performance, PnL, and more, into a single high-level view, making it easy to parse how a portfolio is performing without bouncing between tools. 
-        </p>
-        <p>
-          While this particular iteration didn’t go into production, it serves as a solid example of clear data visualization and showcases my comfort working with dark-mode interfaces and finance-focused applications.
+          This project is an internal dashboard designed to help trading and sales teams monitor ETF trades at a glance in a fast-moving, regulated environment. It consolidates key metrics such as market risk, portfolio risk, PnL, and trader performance, all while enabling users to quickly review portfolio health without switching between multiple systems.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Data Displayed Section -->
+    <!-- The Problem Section -->
   <section class="py-20 bg-white">
-    <div class="w-full md:max-w-5xl mx-auto px-6 text-center md:text-left">
-      <h2 class="text-4xl font-bold mb-12 text-gray-900 text-center">Data Displayed</h2>
+    <div class="w-full md:max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-8 text-gray-900 text-center">The Problem</h2>
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
         <p>
-          The data we showcased came from a mix of sources: guidance from the SME, who outlined the key metrics traders rely on; insights from user interviews and watching how they currently track their positions; and a review of industry-standard tools to make sure we weren’t missing any baseline expectations. Together, these inputs shaped the final set of metrics displayed in the dashboard.
+          This iteration was designed under significant constraints. As I did not have prior domain expertise in ETF trading, the intended approach was to collaborate closely with subject matter experts and end users. However, access to both was not available within the required timeframe, while a stakeholder review was already scheduled.
         </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ETFs at a glance Section -->
-  <section class="py-20 bg-gray-50">
-    <div class="w-full md:max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
-        <div>
-          <h2 class="text-4xl font-bold mb-6 text-gray-900">ETFs at a Glance</h2>
-          <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
-            <p>
-              The top row focuses on the core numbers traders care about: total ETFs, average return, total market value, and total ownership. Each metric includes a small arrow to show whether it’s moved up or down since the last refresh. The goal here was to surface the essentials in a clean, no-frills way, quick readings the user can scan without needing to interpret anything. <br><br> This is followed by an ETF performance chart, daily PnL, and PnL impact table.
-            </p>
-          </div>
-        </div>
-        <div>
-          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src={etfAtAGlance.src} alt="ETF Performance Chart" class="etf-imgw-full" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ETF Performance Section -->
-  <section class="py-20 bg-white">
-    <div class="w-full md:max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
-        <div class="hidden md:block">
-          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src={performanceChart.src} alt="ETF Performance Chart" class="etf-img w-full" />
-          </div>
-        </div>
-        <div>
-          <h2 class="text-4xl font-bold mb-6 text-gray-900 text-center md:text-left">ETF Performance</h2>
-          <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
-            <p>
-              One of my favorite parts of the dashboard is the ETF performance chart. It highlights how a book performs over a selected time range, and the chip controls make it easy to compare multiple ETFs side-by-side if needed. It's a compact way to explore trends without adding extra complexity.
-            </p>
-          </div>
-        </div>
-        <div class="block md:hidden bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-            <img src={performanceChart.src} alt="ETF Performance Chart" class="etf-img-mobile w-full" />
-          </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- P/L Impact Table Section -->
-  <section class="py-20 bg-gray-50">
-    <div class="w-full md:max-w-6xl mx-auto px-6 text-center md:text-left">
-      <h2 class="text-4xl font-bold mb-12 text-gray-900 text-center">P/L Impact Table</h2>
-      
-      <div class="prose prose-lg max-w-none text-gray-700 space-y-6 mb-12">
         <p>
-          The PnL impact table was meant to replace an older, legacy tool, but we also wanted to give users more control to search, sort, and compare their data. After talking with the development team, we decided to base the design on AG Grid: an adaptable, high-performance data-grid library that works across multiple frameworks. Using its built-in features let us offer powerful filtering and customization options while keeping implementation efficient, especially since the team already had an AG Grid license in place.
-        </p>
-      </div>
-      
-      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
-        <img src={pnlTable.src} alt="P/L Impact Table" class="etf-img w-full" />
+          As a result, the design was developed without direct SME or user input and needed to be ready for stakeholder discussion despite these limitations.</p>
       </div>
     </div>
   </section>
 
-  <!-- Proof-of-concept Section -->
+   <!-- My Approach Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="w-full md:max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-8 text-gray-900 text-center">My Approach</h2>
+      <div class="prose prose-lg max-w-none text-gray-700 space-y-8">
+        <p>
+          In the absence of direct SME and user input, the primary challenge was determining which data and metrics were most relevant to surface. To inform this, I triangulated across multiple inputs:
+        </p>
+
+        <div class="space-y-6">
+          <div>
+            <p class="font-semibold text-gray-900 mb-2">Internal reference products:</p>
+            <p>I reviewed existing trading applications within Scotiabank to understand established patterns, commonly surfaced metrics, and internal expectations for financial tooling.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-gray-900 mb-2">External market research:</p>
+            <p>I analyzed publicly available ETF and portfolio monitoring dashboards to identify ETF-specific metrics and conventions commonly used in similar contexts.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-gray-900 mb-2">Initial requirements:</p>
+            <p>I incorporated the early guidance provided around PnL impact and performance visibility.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-2">Exploratory ideation:</p>
+            <p>I used structured brainstorming to expand the metric space and pressure-test which data points might be relevant for an at-a-glance dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- The Design Section -->
   <section class="py-20 bg-white">
-    <div class="w-full md:max-w-4xl mx-auto px-6 text-center md:text-left">
-      <h2 class="text-4xl font-bold mb-12 text-gray-900 text-center">Proof-of-concept vs production</h2>
+    <div class="w-full md:max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-gray-900 text-center">The Design</h2>
+      
+      <div class="mb-12">
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-2xl">
+          <img 
+            src={etfAtAGlance.src} 
+            alt="ETF Dashboard Design" 
+            class="w-full"
+          />
+        </div>
+      </div>
+           <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
+        <p>
+          As part of early ideation, I used ChatGPT to help enumerate and sanity-check which high-level metrics are typically surfaced most prominently in ETF monitoring contexts. This exercise highlighted total ETFs, average return, total market value, and total ownership as the most relevant summary metrics to display upfront.
+        </p>
+
+        <p>
+          Based on this, the top row of the dashboard focuses on these core values. Each metric includes a directional indicator to show movement since the last refresh, allowing users to quickly identify changes without needing additional interpretation. The intent was to provide a clean, no-frills summary layer optimized for fast scanning in time-sensitive workflows.
+        </p>
+
+        <p>
+          This summary view is followed by more detailed components, including an ETF performance chart, daily PnL, and a PnL impact table, enabling users to move from high-level signals to supporting detail within a single screen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<!-- ETF Performance Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="w-full md:max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-gray-900 text-center">ETF Performance</h2>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div class="order-2 md:order-1">
+          <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+            <img 
+              src={performanceChart.src} 
+              alt="ETF Performance Chart" 
+              class="w-full"
+            />
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 prose prose-lg text-gray-700 space-y-6">
+          <p>
+            The ETF performance chart was informed by external market research, which showed similar time-series performance views as a common pattern in trading and portfolio monitoring applications. 
+          </p>
+           <p>
+            Based on this, the chart was designed to show how a book performs over a selected time range, while remaining compact and easy to interpret.
+          </p>
+
+          <p>
+            Chip-based controls allow users to compare multiple ETFs side by side without introducing additional configuration or navigation. This approach supports quick trend analysis while keeping interaction complexity low, aligning with the dashboard’s at-a-glance intent.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- PnL Impact Table Section -->
+  <section class="py-20 bg-white">
+    <div class="w-full md:max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-gray-900 text-center">PnL Impact Table</h2>
+      
+      <div class="mb-12">
+        <div class="bg-gray-900 rounded-lg overflow-hidden shadow-2xl">
+          <img 
+            src={pnlTable.src} 
+            alt="PnL Impact Table" 
+            class="w-full"
+          />
+        </div>
+      </div>
+
       <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
         <p>
-          This iteration never made it to production, and for a good reason. It started out as an early proof-of-concept meant to spark conversation, and the final version that went live took a completely different direction in some pretty unexpected ways. Curious about what actually shipped? Feel free to ask me about it in the interview! :)
+          The PnL impact table was designed to replace an existing legacy tool while expanding users’ ability to search, sort, and compare data. Functional requirements such as column sorting, filtering, and comparison were informed by patterns observed in existing internal trading applications, as well as the initial requirement to migrate this workflow out of the legacy system.
+        </p>
+
+        <p>
+          Based on these requirements and discussions with the development team, the table was implemented using AG Grid, a high-performance data grid library used across multiple internal applications. Leveraging AG Grid’s built-in capabilities enabled advanced filtering and customization while keeping implementation efficient, particularly given the team’s existing license and familiarity with the framework.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+    <!-- Outcome Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="w-full md:max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-8 text-gray-900 text-center">Outcome</h2>
+      
+      <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
+        <p>
+          The initial design was reviewed in a stakeholder meeting and received strong engagement, helping establish early alignment on the overall direction. It proved particularly effective as a conversation starter, enabling more concrete discussions around scope, priorities, and feasibility, and served as a foundation for subsequent iterations.
+        </p>
+
+        <p>
+          It’s important to note that this version represented an early proof of concept, produced with minimal requirements and without direct user validation. As the project progressed and more inputs became available, the design evolved significantly to reflect refined requirements and production constraints. The final version, informed by deeper collaboration and validation, was launched in Summer 2025.
         </p>
       </div>
     </div>
